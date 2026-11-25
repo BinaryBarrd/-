@@ -74,6 +74,7 @@ nav.scrolled {
 .hero {
     position: relative;
     min-height: 100vh;
+    min-height: 100svh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1188,11 +1189,70 @@ footer {
     font-weight: 300;
 }
 
+/* Mobile menu button (hidden on desktop) */
+.nav-toggle { display: none; }
+
+.email-large { margin-top: 8px; font-size: 32px; }
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-    nav { padding: 20px 24px; }
-    .nav-links { gap: 20px; }
-    .nav-links a { font-size: 10px; letter-spacing: 1.5px; }
+    nav { padding: 18px 24px; }
+
+    /* Mobile menu: links become a full-screen overlay */
+    .nav-name, .nav-toggle { position: relative; z-index: 102; }
+
+    .nav-toggle {
+        display: block;
+        background: none;
+        border: none;
+        padding: 8px 0;
+        font-family: var(--sans);
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        color: var(--text-white);
+        cursor: pointer;
+    }
+
+    .nav-links {
+        position: fixed;
+        inset: 0;
+        z-index: 101;
+        flex-direction: column;
+        justify-content: center;
+        gap: 18px;
+        padding: 0 24px;
+        background: var(--bg-dark);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.35s ease, visibility 0.35s ease;
+    }
+
+    .nav-links a {
+        font-family: var(--serif);
+        font-size: 44px;
+        font-weight: 400;
+        letter-spacing: -0.5px;
+        text-transform: none;
+        color: var(--text-white);
+        transform: translateY(16px);
+        transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94), color 0.3s;
+    }
+
+    nav.open .nav-links { opacity: 1; visibility: visible; }
+    nav.open .nav-links a { transform: translateY(0); }
+    nav.open .nav-links a:nth-child(2) { transition-delay: 0.04s; }
+    nav.open .nav-links a:nth-child(3) { transition-delay: 0.08s; }
+    nav.open .nav-links a:nth-child(4) { transition-delay: 0.12s; }
+    nav.open .nav-links a:nth-child(5) { transition-delay: 0.16s; }
+
+    /* backdrop-filter would trap the fixed overlay inside the nav bar */
+    nav.open { background: transparent; backdrop-filter: none; -webkit-backdrop-filter: none; }
+    body.nav-open { overflow: hidden; }
+
+    .email-large { font-size: clamp(20px, 6.4vw, 32px); overflow-wrap: anywhere; }
+    .email-line { overflow-wrap: anywhere; }
     .section-light, .section-dark { padding: 80px 24px; }
     .page-header { padding: 140px 24px 60px; }
 
@@ -1220,7 +1280,13 @@ footer {
         margin: 0 -24px;
         padding-left: 24px;
         padding-right: 24px;
+        scroll-snap-type: x mandatory;
+        scroll-padding-left: 24px;
+        -webkit-overflow-scrolling: touch;
     }
+
+    .project-tile { scroll-snap-align: start; }
+    .project-tile:hover { transform: none; }
 
     .section-header-row {
         flex-direction: column;
@@ -1245,7 +1311,13 @@ footer {
 }
 
 @media (max-width: 480px) {
-    .nav-links { gap: 14px; }
-    .nav-links a { font-size: 9px; }
-    .project-tile { width: 260px; }
+    .section-light, .section-dark { padding: 72px 20px; }
+    nav { padding: 18px 20px; }
+    .page-header, .desk-hero, .projects-hero { padding: 120px 20px 48px; }
+    .project-slider { margin: 0 -20px; padding-left: 20px; padding-right: 20px; scroll-padding-left: 20px; }
+    .project-tile { width: 78vw; min-height: 200px; }
+    .project-detail-title { font-size: 24px; }
+    .pub-title { font-size: 21px; }
+    .hero-sub { font-size: 14px; }
+    .substack-cta { padding: 32px 20px; }
 }
