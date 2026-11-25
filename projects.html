@@ -29,7 +29,7 @@
             <a href="index.html" class="back-link">&larr; Back home</a>
             <div class="section-label">Projects</div>
             <h1 class="section-title">Work so <em>far</em></h1>
-            <p class="page-intro">A collection of research projects and explorations I've undertaken.</p>
+            <p class="page-intro">Auditing AI systems from the outside in: deployed products, open-weight models, and the trust signals in between.</p>
         </div>
     </div>
 
@@ -37,92 +37,62 @@
         <div class="section-inner">
 
             <div class="project-detail">
-                <div class="project-detail-num">01</div>
-                <h3 class="project-detail-title">Dark Pattern Detection in Ride-Hailing Platforms</h3>
+                <div class="project-detail-num">01 &middot; 2026 &ndash; Present</div>
+                <h3 class="project-detail-title">AI Trustworthiness Cue Taxonomy</h3>
+                <div class="project-detail-meta">Design Project (CS F377), BITS Pilani &middot; Mentors: Prof. Siddharth Mehrotra (BITS Pilani), Prof. Pascal K&ouml;nig (VU Amsterdam)</div>
                 <div class="project-detail-tags">
-                    <span class="project-tag">Python</span>
-                    <span class="project-tag">NumPy</span>
+                    <span class="project-tag">Trustworthy AI</span>
+                    <span class="project-tag">Black-Box Auditing</span>
+                    <span class="project-tag">NIST AI RMF</span>
+                    <span class="project-tag">User Study</span>
                 </div>
-                <p class="project-detail-desc">
-                    Built an auditing framework to detect and classify dark patterns in ride-hailing applications.
-                    This work involves systematic analysis of UI/UX patterns that manipulate user decisions,
-                    developed during my research internship at IIT BHU under Prof. N.S. Rajput.
-                </p>
+                <ul class="detail-bullets">
+                    <li>Designed a two-layer taxonomy of AI trust cues (scores, badges, explanations, disclaimers) across finance, healthcare and content moderation. Each cue is traced back to NIST AI RMF properties through shared metric families, then classified on 6 dimensions and by the stakeholder who receives it.</li>
+                    <li>Black-box audited the loan-eligibility calculators of 9 Indian lenders and loan marketplaces (including Bajaj Finserv, Kotak and Axis). Developed a repeatable method that recovers each calculator's rule from its probe log alone. It showed all 9 are fixed formulas (1,507 of 1,507 probes matched within &#8377;1), and the results are published on an open comparison website.</li>
+                    <li>Built and deployed an anonymous online user study in which participants compare 9 anonymised lenders' results for their own figures, then rate trust before and after the hidden assumptions are revealed. Answers map onto the taxonomy's role &times; expertise &times; trust-propensity layer, and trust is measured with a validated scale.</li>
+                </ul>
                 <div class="project-links">
-                   <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-                   <a href="#" class="project-link"><i class="fas fa-file-alt"></i> arXiv</a>
+                    <a href="https://github.com/BinaryBarrd/loan-eligibility-audit" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://taitest-lilac.vercel.app" class="project-link" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Comparison site</a>
                 </div>
             </div>
 
             <div class="project-detail">
                 <div class="project-detail-num">02</div>
-                <h3 class="project-detail-title">Poisoning LLMs via Small Datasets on Constrained Hardware</h3>
+                <h3 class="project-detail-title">Mechanistic Auditing of Covert LLM Backdoors via Activation Steering</h3>
+                <div class="project-detail-meta">Collaborative project &middot; white-box probe for a Stackelberg audit game</div>
                 <div class="project-detail-tags">
-                    <span class="project-tag">PyTorch</span>
-                    <span class="project-tag">Matplotlib</span>
+                    <span class="project-tag">TransformerLens</span>
+                    <span class="project-tag">LoRA / PEFT</span>
+                    <span class="project-tag">Activation Steering</span>
+                    <span class="project-tag">Mech Interp</span>
                 </div>
-                <p class="project-detail-desc">
-                    A replication study examining the feasibility of data poisoning attacks on large language models
-                    under limited computational resources. Investigates how small, carefully crafted poisoned datasets
-                    can compromise model behavior even when the attacker has constrained hardware.
-                </p>
+                <ul class="detail-bullets">
+                    <li>Built a white-box audit pipeline on Pythia-410m using TransformerLens: injected LoRA backdoors (de novo and latent-amplification variants), computed difference-in-means steering vectors across 9 transformer layers, and automated backdoor detection with 0% false positives on clean-model controls.</li>
+                    <li>Engineered probe tooling that exposed a structural asymmetry between backdoor types: de novo backdoors collapse under strong injection while latent-amplification backdoors stay coherent. This finding directly informed the Stackelberg equilibrium computation in the associated audit-game framework.</li>
+                    <li>Identified and characterised a late-layer attractor anomaly (layers 13&ndash;16) through activation analysis, with direct implications for choosing audit targets in sequential Stackelberg audit games.</li>
+                </ul>
                 <div class="project-links">
-                    <a href="https://github.com/BinaryBarrd/Poisoning-attacks-on-LLMs-using-small-sample-size" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-                    
+                    <a href="https://github.com/adityasharma1307/white-box-using-ssg" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub (collab)</a>
                 </div>
             </div>
 
             <div class="project-detail">
                 <div class="project-detail-num">03</div>
-                <h3 class="project-detail-title">White-Box Auditing of Sleeper Agent in LLMs via SSG</h3>
+                <h3 class="project-detail-title">Poisoning LLMs with a Small Dataset</h3>
+                <div class="project-detail-meta">Replication of the constant-number poisoning hypothesis (Souly et al., 2025)</div>
                 <div class="project-detail-tags">
-                    <span class="project-tag">Python</span>
                     <span class="project-tag">PyTorch</span>
+                    <span class="project-tag">Data Poisoning</span>
+                    <span class="project-tag">Hugging Face</span>
                 </div>
-                <p class="project-detail-desc">
-                    Research into internal auditing methods for machine learning models with full access to
-                    model weights, architectures, and training data. Focuses on inspecting decision boundaries,
-                    gradient-based analysis, and identifying potential failure modes before deployment.
-                </p>
+                <ul class="detail-bullets">
+                    <li>Designed and built a full fine-tuning and poisoning pipeline for Pythia-410m on an Apple M1 with 8 GB RAM, resolving out-of-memory and training-instability issues with the Adafactor optimizer, gradient accumulation and FP32 enforcement.</li>
+                    <li>Implemented a stealthy backdoor with only 250 adversarial samples (&lt;0.01% of training data): clean perplexity stayed at 32.41 while triggered perplexity spiked to 643.83.</li>
+                    <li>Validated the attack with mechanistic token-wise loss analysis. The whole pipeline is reproducible on consumer hardware without GPU access.</li>
+                </ul>
                 <div class="project-links">
-                    <a href="https://github.com/adityasharma1307/white-box-using-ssg" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-                    <a href="#" class="project-link"><i class="fas fa-file-alt"></i> arXiv</a>
-                </div>
-            </div>
-
-            <div class="project-detail">
-                <div class="project-detail-num">04</div>
-                <h3 class="project-detail-title">Quantum Communication Protocols</h3>
-                <div class="project-detail-tags">
-                    <span class="project-tag">Quantum Computing</span>
-                    <span class="project-tag">Cryptography</span>
-                </div>
-                <p class="project-detail-desc">
-                    Exploring quantum key distribution and secure communication channels. Studying how quantum
-                    mechanical principles can be leveraged to build provably secure communication protocols
-                    that are resistant to both classical and quantum computational attacks.
-                </p>
-                <div class="project-links">
-                   
-                    <a href="#" class="project-link"><i class="fas fa-file-alt"></i> arXiv</a>
-                </div>
-            </div>
-
-            <div class="project-detail">
-                <div class="project-detail-num">05</div>
-                <h3 class="project-detail-title">Adversarial Attacks on Vision-Language Models</h3>
-                <div class="project-detail-tags">
-                    <span class="project-tag">VLAs</span>
-                    <span class="project-tag">Adversarial ML</span>
-                </div>
-                <p class="project-detail-desc">
-                    Studying the robustness of vision-language agents against targeted adversarial perturbations.
-                    Investigating how carefully crafted inputs can mislead multimodal systems that combine visual
-                    perception with language understanding, and exploring potential defense mechanisms.
-                </p>
-                <div class="project-links">
-                    <a href="#" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-        
+                    <a href="https://github.com/BinaryBarrd/Poisoning-attacks-on-LLMs-using-small-sample-size" class="project-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
                 </div>
             </div>
 

@@ -28,7 +28,7 @@
             <a href="index.html" class="back-link">&larr; Back home</a>
             <div class="section-label">Journey</div>
             <h1 class="section-title">What I've <em>been up to</em></h1>
-            <p class="page-intro">Research, building, communities, and everything in between.</p>
+            <p class="page-intro">Research and engineering work, most recent first.</p>
         </div>
     </div>
 
@@ -39,99 +39,66 @@
             <h2 class="section-title" style="font-size: 32px;">The <em>serious</em> stuff</h2>
             <div class="exp-list">
                 <div class="exp-item">
-                    <div class="exp-date">Feb 2026 &ndash; Present</div>
+                    <div class="exp-date">Jun 2026 &ndash; Present</div>
                     <div>
-                        <div class="exp-role">Professional Assistant</div>
-                        <div class="exp-org">BITS Pilani</div>
-                        <p class="exp-desc">Assisting with academic and lab operations.</p>
+                        <div class="exp-role">AI Intern</div>
+                        <div class="exp-org">Early-Stage AI Startup (under NDA) &middot; Remote</div>
+                        <ul class="exp-bullets">
+                            <li>Built a real-time voice AI pipeline (STT + LLM + TTS) with sub-300ms TTS latency, using a hot-swappable provider adapter over streaming WebSockets on a production VM.</li>
+                            <li>Cut end-to-end voice response latency by ~2.6 seconds per interaction: benchmarking showed the TTS layer, not the LLM, was the addressable bottleneck, and switching providers gave 7.8&times; faster time-to-first-audio.</li>
+                            <li>Designed three RAG microservices (FastAPI, Qdrant, OpenAI embeddings) with a context-aware safety guardrail that prevents answer leakage without blocking legitimate content.</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="exp-item">
                     <div class="exp-date">Jan 2026 &ndash; Present</div>
                     <div>
                         <div class="exp-role">Undergraduate Student Researcher</div>
-                        <div class="exp-org">BITS Pilani</div>
-                        <p class="exp-desc">
-                            Working on backdoor detection in LLMs, adversarial attacks on vision-language models,
-                            and algorithmic auditing of consumer applications.
-                        </p>
+                        <div class="exp-org">BITS Pilani &middot; with Prof. Siddharth Mehrotra (BITS) and Prof. Pascal K&ouml;nig (VU Amsterdam)</div>
+                        <ul class="exp-bullets">
+                            <li>Currently studying how AI trust cues (scores, badges, explanations, disclaimers) reach different stakeholders across finance, healthcare and content moderation, grounded in NIST AI RMF. <a href="projects.html" class="inline-link">See the project &rarr;</a></li>
+                            <li>Black-box audited the loan-eligibility calculators of 9 Indian lenders and showed all 9 are fixed formulas (1,507 of 1,507 probes matched within &#8377;1), and built a user study on how trust shifts once hidden assumptions are revealed.</li>
+                            <li>Previous semester: co-authored a survey on quantum communication in multi-agent systems with A. Gupta and Dr. E. Rajasekar, now under review at IEEE Communications Surveys &amp; Tutorials.</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="exp-item">
                     <div class="exp-date">Jun &ndash; Aug 2025</div>
                     <div>
-                        <div class="exp-role">Research Intern</div>
-                        <div class="exp-org">IIT BHU (Varanasi) &mdash; under Prof. N.S. Rajput</div>
-                        <p class="exp-desc">
-                            Worked on dark pattern detection in ride-hailing applications.
-                            Findings were presented to the Government of India's Ministry of Consumer Affairs.
-                        </p>
+                        <div class="exp-role">ML Research Intern</div>
+                        <div class="exp-org">IIT BHU (Varanasi) &middot; Advisor: Prof. N.S. Rajput</div>
+                        <ul class="exp-bullets">
+                            <li>Ran a synchronized field study as part of an undergraduate research team, capturing 600+ simultaneous fare quotes across iOS and Android devices to control for time and location.</li>
+                            <li>Built an explainable AI pipeline with XGBoost and SHAP to isolate fare drivers. It revealed inter-device fare divergence on 58% of routes, and fare-range opacity as a systematic pricing signal.</li>
+                            <li>Co-authored the report on algorithmic dark patterns that was presented to the Ministry of Consumer Affairs, Government of India, in support of transparent pricing regulation.</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="exp-item">
-                    <div class="exp-date">Feb &ndash; May 2025</div>
-                    <div>
-                        <div class="exp-role">Professional Assistant</div>
-                        <div class="exp-org">Physics Laboratory, BITS Pilani</div>
-                        <p class="exp-desc">
-                            Assisted faculty and students in conducting experiments in mechanics, optics,
-                            and electromagnetic phenomena.
-                        </p>
-                    </div>
-                </div>
-                <div class="exp-item">
-                    <div class="exp-date">Aug &ndash; Dec 2024</div>
+                    <div class="exp-date">Aug 2024 &ndash; Jan 2025</div>
                     <div>
                         <div class="exp-role">Founding Engineer</div>
                         <div class="exp-org">Stealth Startup</div>
-                        <p class="exp-desc">Early-stage product engineering and development.</p>
+                        <ul class="exp-bullets">
+                            <li>Developed a reinforcement learning system for real-time satellite collision avoidance, using policy-gradient methods to minimise collision risk in space-debris encounter scenarios.</li>
+                            <li>Trained avoidance policies on multi-modal inputs from simulated onboard sensors (radar, LIDAR, orbital telemetry) across varying debris densities and orbital configurations.</li>
+                            <li>Benchmarked a Random Forest trajectory-risk classifier alongside the RL policy. Stack: PyTorch, Stable Baselines3, scikit-learn.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- COMMUNITIES & LEADERSHIP -->
+    <!-- PUBLICATIONS -->
     <section class="section-dark">
         <div class="section-inner">
-            <div class="section-label">Communities & Leadership</div>
-            <h2 class="section-title" style="font-size: 32px;">Beyond <em>academics</em></h2>
-            <div class="exp-list">
-                <div class="exp-item">
-                    <div class="exp-date" style="color: var(--text-muted);">Aug 2025 &ndash; Present</div>
-                    <div>
-                        <div class="exp-role" style="color: var(--text-white);">Deputy Vice President</div>
-                        <div class="exp-org" style="color: var(--text-muted);">E-Cell BPDC</div>
-                        <p class="exp-desc">
-                            Leading the entrepreneurship cell. Previously served as Co Head Creative
-                            (Jun&ndash;Aug 2025) and Creative Executive (Aug 2024&ndash;Jun 2025).
-                        </p>
-                    </div>
-                </div>
-                <div class="exp-item">
-                    <div class="exp-date" style="color: var(--text-muted);">Jun 2025 &ndash; Present</div>
-                    <div>
-                        <div class="exp-role" style="color: var(--text-white);">Community Manager</div>
-                        <div class="exp-org" style="color: var(--text-muted);">ACM BITS Pilani &mdash; Dubai</div>
-                        <p class="exp-desc">Managing the ACM student chapter community.</p>
-                    </div>
-                </div>
-                <div class="exp-item">
-                    <div class="exp-date" style="color: var(--text-muted);">Mar &ndash; Jun 2025</div>
-                    <div>
-                        <div class="exp-role" style="color: var(--text-white);">Mentor</div>
-                        <div class="exp-org" style="color: var(--text-muted);">Peer Mentorship Program, BITS Pilani</div>
-                        <p class="exp-desc">Guided incoming students through academics and campus life.</p>
-                    </div>
-                </div>
-                <div class="exp-item">
-                    <div class="exp-date" style="color: var(--text-muted);">Aug 2024 &ndash; May 2025</div>
-                    <div>
-                        <div class="exp-role" style="color: var(--text-white);">Operations Executive</div>
-                        <div class="exp-org" style="color: var(--text-muted);">Linux Users Group, BITS Dubai</div>
-                        <p class="exp-desc">Organized events and managed operations for the open-source community.</p>
-                    </div>
-                </div>
+            <div class="section-label">Publications</div>
+            <h2 class="section-title" style="font-size: 32px;">In <em>review</em></h2>
+            <div class="pub-item">
+                <div class="pub-title">Quantum Communication in Multi-Agent Systems: A Survey of Models, Constraints and Open Challenges</div>
+                <div class="pub-authors">A. Gupta, <strong>A. Bansal</strong>, E. Rajasekar</div>
+                <div class="pub-venue">IEEE Communications Surveys &amp; Tutorials (under review), 2026</div>
             </div>
         </div>
     </section>
@@ -143,10 +110,11 @@
             <h2 class="section-title" style="font-size: 32px;">Where I <em>study</em></h2>
             <div class="exp-list">
                 <div class="exp-item">
-                    <div class="exp-date">2023 &ndash; 2027</div>
+                    <div class="exp-date">2023 &ndash; Jan 2028</div>
                     <div>
                         <div class="exp-role">BITS Pilani, Dubai Campus</div>
-                        <div class="exp-org">B.E. Computer Science</div>
+                        <div class="exp-org">B.E. Computer Science &middot; GPA 9.01 / 10</div>
+                        <p class="exp-desc">Machine Learning, Deep Learning, Probability &amp; Statistics, Numerical Analysis, Linear Algebra, Game Theory</p>
                     </div>
                 </div>
             </div>
