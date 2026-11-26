@@ -39,11 +39,11 @@
             <div class="section-label">Research & Work</div>
             <h2 class="section-title" style="font-size: 32px;">The <em>serious</em> stuff</h2>
             <div class="exp-list">
-                <div class="exp-item">
+                <div class="exp-item" id="exp-ai-intern">
                     <div class="exp-date">Jun 2026 &ndash; Present</div>
                     <div>
-                        <div class="exp-role">AI Intern</div>
-                        <div class="exp-org">Early-Stage AI Startup (under NDA) &middot; Remote</div>
+                        <div class="exp-role">AI Engineering Intern</div>
+                        <div class="exp-org">Dubai-based AI Startup (under NDA) &middot; Remote</div>
                         <ul class="exp-bullets">
                             <li>Built a real-time voice AI pipeline (STT + LLM + TTS) with sub-300ms TTS latency, using a hot-swappable provider adapter over streaming WebSockets on a production VM.</li>
                             <li>Cut end-to-end voice response latency by ~2.6 seconds per interaction: benchmarking showed the TTS layer, not the LLM, was the addressable bottleneck, and switching providers gave 7.8&times; faster time-to-first-audio.</li>
@@ -51,19 +51,29 @@
                         </ul>
                     </div>
                 </div>
-                <div class="exp-item">
-                    <div class="exp-date">Jan 2026 &ndash; Present</div>
+                <div class="exp-item" id="exp-bits-trust">
+                    <div class="exp-date">Aug 2026 &ndash; Present</div>
                     <div>
                         <div class="exp-role">Undergraduate Student Researcher</div>
-                        <div class="exp-org">BITS Pilani &middot; with Prof. Siddharth Mehrotra (BITS) and Prof. Pascal K&ouml;nig (VU Amsterdam)</div>
+                        <div class="exp-org">BITS Pilani &middot; Advisors: Prof. Siddharth Mehrotra (BITS Pilani), Prof. Pascal K&ouml;nig (VU Amsterdam)</div>
                         <ul class="exp-bullets">
-                            <li>Currently studying how AI trust cues (scores, badges, explanations, disclaimers) reach different stakeholders across finance, healthcare and content moderation, grounded in NIST AI RMF. <a href="projects.html" class="inline-link">See the project &rarr;</a></li>
+                            <li>Assessing the trustworthiness of deployed AI systems through their trust cues (scores, badges, explanations, disclaimers), and how those cues reach different stakeholders across finance, healthcare and content moderation, grounded in NIST AI RMF. <a href="projects.html" class="inline-link">See the project &rarr;</a></li>
                             <li>Black-box audited the loan-eligibility calculators of 9 Indian lenders and showed all 9 are fixed formulas (1,507 of 1,507 probes matched within &#8377;1), and built a user study on how trust shifts once hidden assumptions are revealed.</li>
-                            <li>Previous semester: co-authored a survey on quantum communication in multi-agent systems with A. Gupta and Dr. E. Rajasekar, now under review at IEEE Communications Surveys &amp; Tutorials.</li>
                         </ul>
                     </div>
                 </div>
-                <div class="exp-item">
+                <div class="exp-item" id="exp-bits-quantum">
+                    <div class="exp-date">Jan &ndash; Jul 2026</div>
+                    <div>
+                        <div class="exp-role">Undergraduate Student Researcher</div>
+                        <div class="exp-org">BITS Pilani &middot; Advisor: Dr. Elakkiya Rajasekar</div>
+                        <ul class="exp-bullets">
+                            <li>Co-authored a systematic review of quantum multi-agent systems with A. Gupta, proposing a five-tier communication taxonomy and identifying three cross-layer friction points that break standard MARL convergence assumptions. Now under review at IEEE Communications Surveys &amp; Tutorials.</li>
+                            <li>Built a discrete-event simulation of a configurable quantum network with probabilistic entanglement generation and real-time T&#8322; fidelity decay, validated against a novel compositional capacity theorem bounding cross-layer utility.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="exp-item" id="exp-iit-bhu">
                     <div class="exp-date">Jun &ndash; Aug 2025</div>
                     <div>
                         <div class="exp-role">ML Research Intern</div>
@@ -75,7 +85,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="exp-item">
+                <div class="exp-item" id="exp-founding">
                     <div class="exp-date">Aug 2024 &ndash; Jan 2025</div>
                     <div>
                         <div class="exp-role">Founding Engineer</div>
@@ -122,7 +132,7 @@
         </div>
     </section>
 
-    <footer>Learning on loop.</footer>
+    <footer>doing something.</footer>
 
     <script>
         const nav = document.querySelector('nav');
