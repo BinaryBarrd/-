@@ -1190,6 +1190,22 @@ footer {
     font-weight: 300;
 }
 
+/* Hero note under the question */
+.hero-note {
+    font-family: var(--sans);
+    font-style: italic;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    color: #7a7a7a;
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 1.5;
+    text-wrap: balance;
+    animation: heroFadeIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.9s both;
+}
+
+.hero-star { font-style: normal; opacity: 0.7; padding: 0 4px; }
+
 /* Mobile menu button (hidden on desktop) */
 .nav-toggle { display: none; }
 
